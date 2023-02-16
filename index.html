@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css/>
+	<link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="card">
+            <div class="card-title">
+                <h3><i class="fa fa-user-circle-o" aria-hidden="true"></i>User <span id="action-title">Login</span></h3>
+            </div>
+            <div class="card-body">
+                <div class="card-body-top">
+                    <button id="login" class="btn" onclick="login_btn()">login</button>
+                    <button id="register" class="btn" onclick="register_btn()">register</button>
+                    <div id="bottom_line"></div>
+                </div>
+                <div class="card-body-bottom">
+                    <form id="login_form">
+                        <br>
+                        <input type="email" class="input-field" required="" placeholder="Enter your Email"><br><br>
+                        <input type="password" class="input-field" required="" placeholder="Enter your Password"><br><br>
+                        <br>
+                        <input type="submit" class="submit-field" value="login">
+                    </form>
+                    <form id="register_form">
+                        <input type="text" class="input-field" required="" placeholder="Enter your Name"><br><br>
+                        <input type="Email" class="input-field" required="" placeholder="Enter your Email"><br><br>
+                        <input type="Paasword" class="input-field" required="" placeholder="Enter your Password"><br><br><br>
+                        <br>
+                        <input type="submit" class="submit-field" value="register">
+                    </form>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var a = document.getElementById('login_form');
+        var b = document.getElementById('register_form');
+        var c = document.getElementById('bottom_line');
+        var d = document.getElementById('login');
+        var e = document.getElementById('register');
+        var span = document.getElementById('action-title');
+
+        function register_btn(){
+            a.style.left = "-450px";
+            b.style.left = "30px";
+            c.style.left = "215px";
+            d.style.color = "#848484";
+            e.style.color = "#15C3FF";
+            span.textContent = "register";
+        }
+        function login_btn(){
+            a.style.left = "30px";
+            b.style.left = "450px";
+            c.style.left = "30px";
+            d.style.color = "#15C3FF";
+            e.style.color = "#848484";
+            span.textContent = "login";
+        }
+    </script>
+</body>
+</html>
